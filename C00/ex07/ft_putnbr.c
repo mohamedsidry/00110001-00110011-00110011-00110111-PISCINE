@@ -1,30 +1,31 @@
 #include "../header.h"
 
 
-void ft_recorsion(int n);
+void ft_recorsion(long int n);
 void ft_putnbr(int nb)
 {
+	long lnb;
 
+	lnb = nb;
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		nb *= -1;
+		lnb *= -1;
 	}
 
 
-	ft_recorsion(nb);
+	ft_recorsion(lnb);
 
 }
 
 
-void ft_recorsion(int nb)
+void ft_recorsion(long int nb)
 {
 
-	if (nb / 10  == 0)
+	if(nb >= 10)
 	{
-		return ft_putchar(nb % 10 + 48);
+		ft_recorsion(nb / 10 );
 	}
-	ft_recorsion(nb / 10);
 	ft_putchar(nb % 10 + 48);
 
 }

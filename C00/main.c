@@ -12,7 +12,7 @@ void combtwo(void);
 void combfour(void);
 void putnumber(void);
 
-int main (int argc, char **argv)
+int main (void)
 {
 
 	int i;
